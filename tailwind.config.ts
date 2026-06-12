@@ -9,8 +9,17 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: "#1a4731",
+        "primary-dark": "#0e2b1c",
+        accent: "#f0e6c8",
+        "muted-1": "#7ab891",
+        "muted-2": "#a8d4b8",
+        "muted-3": "#4a7a5a",
+        "green-tint": "#eef5f0",
+      },
+      fontFamily: {
+        serif: ["Cormorant Garamond", "Georgia", "serif"],
+        sans: ["Montserrat", "Helvetica", "sans-serif"],
       },
     },
   },
