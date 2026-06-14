@@ -3,7 +3,7 @@ export default function BadgeStrip() {
     "DBHDS Provider #18771",
     "Alexandria VA",
     "Medicaid DD Waiver",
-    "Mon–Sat · 9AM–5PM",
+    "7 Days a Week · 9AM–5PM",
   ];
 
   return (

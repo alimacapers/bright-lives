@@ -72,7 +72,7 @@ export default function Schedule() {
             className="font-serif"
             style={{ color: "#1a4731", fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 600 }}
           >
-            Monday–Saturday, 9AM–5PM
+            7 Days a Week, 9AM–5PM
           </h2>
           <p
             className="mt-4 text-sm leading-relaxed max-w-md"
