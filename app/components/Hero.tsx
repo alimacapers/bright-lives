@@ -1,6 +1,5 @@
 "use client";
 
-import SunMark from "./SunMark";
 
 export default function Hero() {
   return (
