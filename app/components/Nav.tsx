@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react";
 import SunMark from "./SunMark";
 
+const links = ["About", "Services", "Schedule", "Gallery", "Contact"];
+
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -47,7 +49,7 @@ export default function Nav() {
 
           {/* Desktop links */}
           <div className="hidden md:flex items-center gap-10">
-            {["About", "Services", "Schedule"].map((link) => (
+            {links.map((link) => (
               <a
                 key={link}
                 href={`#${link.toLowerCase()}`}
@@ -109,7 +111,7 @@ export default function Nav() {
           className="md:hidden border-t px-6 py-8 flex flex-col gap-6"
           style={{ backgroundColor: "#1a4731", borderColor: "#2d6347" }}
         >
-          {["About", "Services", "Schedule"].map((link) => (
+          {links.map((link) => (
             <a
               key={link}
               href={`#${link.toLowerCase()}`}
