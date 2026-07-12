@@ -5,9 +5,9 @@ import { useEffect, useRef, useState } from "react";
 const timeSlots = [
   {
     time: "9:00 AM",
-    name: "Morning Arrival & Community Check-In",
+    name: "Community Meet-Up & Check-In",
     description:
-      "Participants arrive, review the day's goals, and connect with peers and staff before heading into the community.",
+      "Participants meet staff at an agreed community location, review the day's goals, and begin activities in real-world settings.",
   },
   {
     time: "10:00 AM",
@@ -29,9 +29,9 @@ const timeSlots = [
   },
   {
     time: "4:00 PM",
-    name: "Reflection & Goal Review",
+    name: "Reflection & Transition Planning",
     description:
-      "Wrap-up session reviewing progress toward ISP goals, celebrating wins, and preparing for tomorrow with staff and peers.",
+      "Staff and participants review progress toward ISP goals, celebrate wins, and coordinate the transition home or to the next destination.",
   },
 ];
 
@@ -154,7 +154,7 @@ export default function Schedule() {
               className="pl-4 font-serif text-lg italic"
               style={{ color: "#a8d4b8" }}
             >
-              See you tomorrow
+              A purposeful day, out in the community
             </span>
           </div>
         </div>

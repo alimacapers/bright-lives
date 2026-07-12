@@ -18,14 +18,14 @@ export default function Appointment() {
                 className="font-serif mb-2"
                 style={{ color: "#1a4731", fontSize: "clamp(1.6rem, 3vw, 2.2rem)", fontWeight: 600 }}
               >
-                Set an appointment
+                Start a conversation
               </h2>
               <p
                 className="text-sm leading-relaxed max-w-lg"
                 style={{ color: "#4a5a3a", fontFamily: "Montserrat, sans-serif", fontWeight: 300 }}
               >
-                Reach out today to schedule a visit and take the first step
-                toward a brighter future.
+                Call to discuss goals, eligibility, and how non-center-based
+                support can fit into everyday community life.
               </p>
             </div>
           </div>

@@ -2,32 +2,25 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Bright Lives Community Support LLC | Day Support Alexandria VA",
+  metadataBase: new URL("https://brightlivesllc.com"),
+  title: "Bright Lives Community Support LLC | Community Engagement in Northern Virginia",
   description:
-    "DBHDS-licensed day support for adults with developmental disabilities in Alexandria, VA. ISP-driven, HCBS-compliant community support serving Northern Virginia.",
+    "DBHDS-licensed, non-center-based community engagement for adults with developmental disabilities in Alexandria and Northern Virginia.",
   keywords:
-    "day support, developmental disabilities, Alexandria VA, DBHDS, HCBS, Medicaid waiver, community support, Northern Virginia",
+    "community engagement, non-center-based support, developmental disabilities, Alexandria VA, DBHDS, HCBS, Medicaid waiver, Northern Virginia",
   openGraph: {
     title: "Bright Lives Community Support LLC",
     description:
-      "Real community. Real lives. DBHDS-licensed day support for adults with developmental disabilities in Alexandria, VA.",
+      "Real community. Real lives. Non-center-based community engagement for adults with developmental disabilities in Northern Virginia.",
     type: "website",
     url: "https://brightlivesllc.com",
     siteName: "Bright Lives Community Support LLC",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Bright Lives Community Support LLC",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Bright Lives Community Support LLC",
     description:
-      "Real community. Real lives. DBHDS-licensed day support for adults with developmental disabilities in Alexandria, VA.",
+      "Real community. Real lives. Non-center-based community engagement for adults with developmental disabilities in Northern Virginia.",
   },
   icons: {
     icon: "/favicon.svg",

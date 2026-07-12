@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import SunMark from "./SunMark";
 
-const links = ["About", "Services", "Schedule", "Gallery", "Contact"];
+const links = ["About", "Services", "Eligibility", "Schedule", "Contact"];
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);

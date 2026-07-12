@@ -3,8 +3,8 @@ import Hero from "./components/Hero";
 import BadgeStrip from "./components/BadgeStrip";
 import About from "./components/About";
 import Services from "./components/Services";
+import Eligibility from "./components/Eligibility";
 import Schedule from "./components/Schedule";
-import Gallery from "./components/Gallery";
 import Appointment from "./components/Appointment";
 import CTA from "./components/CTA";
 import Contact from "./components/Contact";
@@ -19,8 +19,8 @@ export default function Home() {
         <BadgeStrip />
         <About />
         <Services />
+        <Eligibility />
         <Schedule />
-        <Gallery />
         <Appointment />
         <CTA />
         <Contact />
