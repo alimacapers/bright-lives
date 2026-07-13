@@ -1,146 +1,49 @@
-"use client";
-
+import Image from "next/image";
+import { ArrowDown, ArrowRight, MapPin } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section
-      id="hero"
-      className="relative min-h-screen flex flex-col justify-center overflow-hidden pt-16"
-      style={{ backgroundColor: "#1a4731" }}
-      aria-label="Hero section"
-    >
-      {/* Subtle large concentric circles — background texture */}
-      <div
-        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/3 pointer-events-none select-none"
-        aria-hidden="true"
-      >
-        <svg width="700" height="700" viewBox="0 0 700 700" fill="none" xmlns="http://www.w3.org/2000/svg" className="animate-spin-slow">
-          <circle cx="350" cy="350" r="320" stroke="#f0e6c8" strokeWidth="0.5" opacity="0.06" />
-          <circle cx="350" cy="350" r="260" stroke="#f0e6c8" strokeWidth="0.5" opacity="0.06" />
-          <circle cx="350" cy="350" r="200" stroke="#f0e6c8" strokeWidth="0.5" opacity="0.06" />
-          <circle cx="350" cy="350" r="140" stroke="#f0e6c8" strokeWidth="0.5" opacity="0.07" />
-          <circle cx="350" cy="350" r="80" stroke="#f0e6c8" strokeWidth="0.5" opacity="0.08" />
-          <circle cx="350" cy="350" r="30" fill="#f0e6c8" opacity="0.05" />
-          {[0,45,90,135,180,225,270,315].map((angle, i) => (
-            <line
-              key={i}
-              x1={350 + Math.cos(angle * Math.PI / 180) * 84}
-              y1={350 + Math.sin(angle * Math.PI / 180) * 84}
-              x2={350 + Math.cos(angle * Math.PI / 180) * 320}
-              y2={350 + Math.sin(angle * Math.PI / 180) * 320}
-              stroke="#f0e6c8"
-              strokeWidth="0.5"
-              opacity="0.05"
-            />
-          ))}
-        </svg>
-      </div>
+    <section id="hero" className="relative min-h-[96vh] overflow-hidden bg-[#123c2b] pt-16" aria-label="Welcome to Bright Lives">
+      <Image
+        src="/images/community-market.png"
+        alt="Adults enjoying a community farmers market together"
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover object-center"
+      />
+      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(8,35,24,.97)_0%,rgba(8,35,24,.88)_34%,rgba(8,35,24,.3)_66%,rgba(8,35,24,.08)_100%)]" />
+      <div className="absolute inset-0 hero-grain opacity-20" />
 
-      <div className="relative z-10 max-w-5xl mx-auto px-6 sm:px-10 lg:px-16 py-28">
-        {/* Eyebrow */}
-        <div className="animate-fade-up delay-100 flex items-center gap-3 mb-10">
-          <span
-            className="block w-8 h-px"
-            style={{ backgroundColor: "#4a7a5a" }}
-            aria-hidden="true"
-          />
-          <span
-            className="text-xs font-semibold tracking-[0.22em] uppercase"
-            style={{ color: "#7ab891", fontFamily: "Montserrat, sans-serif" }}
-          >
-            DBHDS Licensed · Provider #18771
-          </span>
-        </div>
-
-        {/* Headline */}
-        <h1
-          className="animate-fade-up delay-200 font-serif leading-[1.05] mb-8"
-          style={{
-            color: "#f0e6c8",
-            fontSize: "clamp(3rem, 8vw, 7rem)",
-            fontWeight: 600,
-          }}
-        >
-          Real community.
-          <br />
-          Real{" "}
-          <em className="italic" style={{ color: "#a8d4b8" }}>
-            lives.
-          </em>
-        </h1>
-
-        {/* Divider */}
-        <div
-          className="animate-fade-up delay-250 w-16 h-px mb-8"
-          style={{ backgroundColor: "#2d6347" }}
-          aria-hidden="true"
-        />
-
-        {/* Subheading */}
-        <p
-          className="animate-fade-up delay-300 text-base sm:text-lg max-w-lg leading-relaxed mb-12"
-          style={{ color: "#a8d4b8", fontFamily: "Montserrat, sans-serif", fontWeight: 300 }}
-        >
-          DBHDS-licensed day support for adults with developmental disabilities
-          in Alexandria, VA — grounded in community, driven by your individual
-          support plan.
-        </p>
-
-        {/* CTAs */}
-        <div className="animate-fade-up delay-400 flex flex-wrap gap-4 mb-20">
-          <a
-            href="#cta"
-            className="px-8 py-3.5 text-sm font-semibold tracking-wide transition-all duration-200 hover:brightness-110"
-            style={{
-              backgroundColor: "#f0e6c8",
-              color: "#1a4731",
-              fontFamily: "Montserrat, sans-serif",
-            }}
-          >
-            Get started today
-          </a>
-          <a
-            href="#about"
-            className="px-8 py-3.5 text-sm font-semibold tracking-wide border transition-all duration-200 hover:bg-white/10"
-            style={{
-              borderColor: "#4a7a5a",
-              color: "#a8d4b8",
-              fontFamily: "Montserrat, sans-serif",
-            }}
-          >
-            Learn more
-          </a>
-        </div>
-
-        {/* Stats row — clean ruled, not cards */}
-        <div
-          className="animate-fade-up delay-500 border-t pt-8"
-          style={{ borderColor: "#2d6347" }}
-        >
-          <div className="flex flex-wrap gap-12 lg:gap-20">
-            {[
-              { stat: "100%", label: "ISP-Driven" },
-              { stat: "HCBS", label: "Compliant" },
-              { stat: "NoVA", label: "Community Based" },
-            ].map(({ stat, label }) => (
-              <div key={stat}>
-                <div
-                  className="font-serif mb-1"
-                  style={{ color: "#f0e6c8", fontSize: "2rem", fontWeight: 500 }}
-                >
-                  {stat}
-                </div>
-                <div
-                  className="text-xs font-medium tracking-widest uppercase"
-                  style={{ color: "#4a7a5a", fontFamily: "Montserrat, sans-serif" }}
-                >
-                  {label}
-                </div>
-              </div>
-            ))}
+      <div className="relative z-10 mx-auto flex min-h-[calc(96vh-4rem)] max-w-7xl items-center px-6 py-24 sm:px-10 lg:px-16">
+        <div className="max-w-2xl">
+          <div className="animate-fade-up inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[.18em] text-[#d6efde] backdrop-blur-md">
+            <MapPin size={13} aria-hidden="true" />
+            Alexandria & Northern Virginia
+          </div>
+          <h1 className="animate-fade-up delay-100 mt-8 font-serif text-[clamp(3.6rem,8vw,7.8rem)] font-semibold leading-[.88] tracking-[-.035em] text-white">
+            Life happens
+            <span className="mt-2 block italic text-[#f4c76d]">out here.</span>
+          </h1>
+          <p className="animate-fade-up delay-200 mt-8 max-w-xl text-base font-light leading-8 text-[#d6efde] sm:text-lg">
+            Personalized, non-center-based community engagement that helps adults with developmental disabilities build confidence, connection, and a life they choose.
+          </p>
+          <div className="animate-fade-up delay-300 mt-10 flex flex-wrap gap-4">
+            <a href="#contact" className="group inline-flex items-center gap-3 rounded-full bg-[#f4c76d] px-7 py-4 text-sm font-bold text-[#123c2b] shadow-xl shadow-black/20 transition hover:-translate-y-1 hover:bg-white">
+              Talk with our team <ArrowRight size={17} className="transition-transform group-hover:translate-x-1" />
+            </a>
+            <a href="#story" className="inline-flex items-center rounded-full border border-white/30 bg-white/10 px-7 py-4 text-sm font-semibold text-white backdrop-blur-md transition hover:bg-white/20">
+              See how it works
+            </a>
+          </div>
+          <div className="animate-fade-up delay-400 mt-14 flex flex-wrap gap-x-8 gap-y-3 text-xs font-semibold uppercase tracking-[.14em] text-white/70">
+            <span>DBHDS Licensed</span><span>Provider #18771</span><span>HCBS Aligned</span>
           </div>
         </div>
       </div>
+      <a href="#about" aria-label="Explore Bright Lives" className="absolute bottom-7 left-1/2 z-10 hidden -translate-x-1/2 flex-col items-center gap-2 text-[10px] font-semibold uppercase tracking-[.2em] text-white/70 md:flex">
+        Explore <ArrowDown size={16} className="animate-bounce" />
+      </a>
     </section>
   );
 }

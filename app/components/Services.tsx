@@ -52,26 +52,25 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="py-28"
-      style={{ backgroundColor: "#f4f8f5" }}
+      className="py-28 bg-[#fffaf0]"
       aria-labelledby="services-heading"
     >
       <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16">
         {/* Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-16 pb-8 border-b" style={{ borderColor: "#dceae1" }}>
+        <div className="reveal flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-16">
           <div>
             <p
               className="text-xs font-semibold tracking-[0.22em] uppercase mb-4"
               style={{ color: "#7ab891", fontFamily: "Montserrat, sans-serif" }}
             >
-              What We Offer
+              Possibilities in motion
             </p>
             <h2
               id="services-heading"
               className="font-serif"
               style={{ color: "#1a4731", fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 600 }}
             >
-              Day support services
+              Skills for a fuller life
             </h2>
           </div>
           <p
@@ -84,20 +83,15 @@ export default function Services() {
         </div>
 
         {/* Service list — refined, not card grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px" style={{ backgroundColor: "#dceae1" }}>
-          {services.map(({ icon: Icon, name, description }) => (
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {services.map(({ icon: Icon, name, description }, index) => (
             <article
               key={name}
-              className="bg-white p-8 transition-all duration-200 hover:bg-[#f4f8f5] group"
+              className={`reveal reveal-delay-${(index % 3) + 1} bg-white p-8 rounded-3xl border border-[#e7eee9] transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-[#123c2b]/10 group`}
             >
-              <Icon
-                size={18}
-                aria-hidden="true"
-                className="mb-5"
-                style={{ color: "#7ab891" }}
-              />
+              <span className="grid h-12 w-12 place-items-center rounded-2xl bg-[#dcefe2] transition group-hover:rotate-6 group-hover:bg-[#f4c76d]"><Icon size={20} aria-hidden="true" className="text-[#123c2b]" /></span>
               <h3
-                className="font-serif text-lg font-semibold mb-3"
+                className="font-serif text-2xl font-semibold mb-3 mt-7"
                 style={{ color: "#1a4731" }}
               >
                 {name}
